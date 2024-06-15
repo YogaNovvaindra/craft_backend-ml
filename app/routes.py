@@ -9,3 +9,7 @@ def predict_route():
 @app.route('/labels', methods=['GET'])
 def labels_route():
     return get_labels()
+
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({"status": "service is running"})
